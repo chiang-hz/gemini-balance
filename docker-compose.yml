@@ -2,7 +2,7 @@ volumes:
   mysql_data:
 services:
   gemini-balance:
-    image: ghcr.io/chiang-hz/gemini-balance:main
+    image: ghcr.io/snailyp/gemini-balance:latest
     container_name: gemini-balance
     restart: unless-stopped
     ports:
@@ -38,4 +38,5 @@ services:
       retries: 3    # 重试3次失败后标记为 unhealthy
 
       start_period: 30s # 容器启动后等待30秒再开始第一次健康检查
+
 
